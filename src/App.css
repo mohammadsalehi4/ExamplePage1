@@ -1,38 +1,472 @@
-.App {
-  text-align: center;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  line-height: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: nunito;
+  src: url("../public/Nunito.ttf");
+}
+@font-face {
+  font-family: nimbus;
+  src: url("../public/Nimbus.ttf");
+}
+@font-face {
+  font-family: neometricBold;
+  src: url("../public/NeometricAltExtraBold(Bold).otf");
+}
+body {
+  background: #d0d0f0;
+  font-family: nunito;
+}
+
+#OuterBox {
+  width: 1470px;
+  height: 680px;
+  background: #ececec;
+  margin-left: 35px;
+  margin-top: 25px;
+  border-radius: 30px;
+  position: absolute;
+}
+
+#topLogo {
+  font-size: 25px;
+  font-family: nimbus;
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+.innerLogoName {
+  display: inline;
+}
+
+.rightLogoName {
+  color: #4747f0;
+}
+
+#logo {
+  background: url("../public/OP.png");
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 35px;
+}
+
+#LeftSide {
+  position: absolute;
+  width: 294px;
+  height: 680px;
+}
+
+#LeftMenu {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 70px;
+}
+#LeftMenu a {
+  display: block;
+  padding: 15px 25px;
+  margin-top: 10px;
+  border-radius: 20px;
+  color: #3d3d3d;
+}
+#LeftMenu a .FAMenu {
+  display: none;
+  color: white;
+  float: right;
+}
+#LeftMenu a:hover {
+  background: #9e42c9;
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+}
+#LeftMenu a:hover .FAMenu {
+  display: inline-block;
+}
+
+#leftButtomMenu {
+  position: absolute;
+  height: 200px;
+  width: 80%;
+  margin-left: 10%;
+}
+#leftButtomMenu #LBMTitle {
+  color: #686868;
+  margin-top: 20px;
+  font-size: 12px;
+  margin-left: 25px;
+}
+#leftButtomMenu a {
+  display: block;
+  padding: 15px 25px;
+  margin-top: 10px;
+  border-radius: 20px;
+  color: black;
+  font-weight: 900;
+}
+#leftButtomMenu a .LBMNumber {
+  background: orange;
+  display: inline;
+  float: right;
+  color: white;
+  padding: 9px 12px;
+  border-radius: 100%;
+  margin-top: -9px;
+}
+#leftButtomMenu a:hover {
+  background: #9e42c9;
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#MiddleSide {
+  position: absolute;
+  background: white;
+  width: 882px;
+  height: 640px;
+  top: 20px;
+  left: 294px;
+  border-radius: 30px;
+}
+#MiddleSide #MTLBox {
+  position: absolute;
+  width: 500px;
+  height: 270px;
+}
+#MiddleSide #MTLBox #MTLBTitle {
+  font-family: neometricBold;
+  font-size: 40px;
+  box-sizing: border-box;
+  margin-top: 60px;
+  margin-left: 40px;
+  font-weight: bolder;
+  display: block;
+}
+#MiddleSide #MTLBox #MTLBDisc {
+  margin-left: 40px;
+  margin-top: 20px;
+  display: block;
+}
+#MiddleSide #MTLBox #MTLBButton {
+  background: #9e42c9;
+  display: inline-block;
+  padding: 13px 20px;
+  width: 130px;
+  margin-left: 40px;
+  margin-top: 20px;
+  border-radius: 15px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#MiddleSide #MTLBox #MTLBButton i {
+  display: in;
+  float: right;
+}
+#MiddleSide #MTLBox #MTLBButton:hover {
+  cursor: pointer;
+  background: #8c35b4;
+  transition: 0.2s;
+}
+#MiddleSide #MTRBox {
+  position: absolute;
+  width: 300px;
+  height: 270px;
+  margin-left: 582px;
+  background: url("../public/3d.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#MiddleSide #MMBBox {
+  position: absolute;
+  width: 800px;
+  height: 340px;
+  margin-left: 41px;
+  margin-top: 280px;
+}
+#MiddleSide #MMBBox #week {
+  font-weight: 700;
+}
+#MiddleSide #MMBBox #menu {
+  background: #ececec;
+  border-radius: 10px;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+}
+#MiddleSide #MMBBox #menu .weekDay {
+  font-size: 15px;
+  padding: 15px 20px;
+  width: 160px;
+}
+#MiddleSide #MMBBox #menu .weekDay i {
+  float: right;
+  display: none;
+  color: white;
+}
+#MiddleSide #MMBBox #menu .weekDay:hover {
+  background: #8c35b4;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#MiddleSide #MMBBox #menu .weekDay:hover i {
+  display: inline-block;
+}
+#MiddleSide #MMBBox #week:hover #menu {
+  cursor: pointer;
+  display: inline-block;
+}
+#MiddleSide #MMBBox #challenge {
+  width: 500px;
+  height: 150px;
+  background: #ececec;
+  margin-top: 10px;
+  margin-left: 255px;
+  border-radius: 20px;
+}
+#MiddleSide #MMBBox #challenge #leftChallenge {
+  width: 8px;
+  height: 120px;
+  margin-top: 15px;
+  margin-left: 15px;
+  background: purple;
+  position: absolute;
+  border-radius: 10px;
+}
+#MiddleSide #MMBBox #challenge #challengeBackground {
+  height: 120px;
+  width: 120px;
+  background: url("../public/business.png");
+  background-size: contain;
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 15px;
+}
+#MiddleSide #MMBBox #challenge #challengeTime {
+  position: absolute;
+  color: blue;
+  margin-left: 190px;
+  margin-top: 20px;
+}
+#MiddleSide #MMBBox #challenge #challengeTime p {
+  display: inline-block;
+  margin-left: 10px;
+}
+#MiddleSide #MMBBox #challenge #challengeTitle {
+  position: absolute;
+  display: inline-block;
+  font-weight: 900;
+  margin-left: 190px;
+  margin-top: 50px;
+  width: 180px;
+}
+#MiddleSide #MMBBox #challenge #challengeDesc {
+  position: absolute;
+  width: 250px;
+  margin-left: 190px;
+  margin-top: 90px;
+  font-size: 14px;
+}
+#MiddleSide #MMBBox #challenge #CArrow {
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 450px;
+}
+#MiddleSide #MMBBox #challenge:hover {
+  background: #e0dfdf;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#RightSide {
+  width: 294px;
+  position: absolute;
+  left: 1176px;
+  height: 680px;
 }
+#RightSide #RTBox {
+  margin-top: 35px;
+  margin-left: 35px;
+  display: block;
+  /* The switch - the box around the slider */
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+#RightSide #RTBox p {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bolder;
+}
+#RightSide #RTBox .switch {
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  margin-left: 30px;
+}
+#RightSide #RTBox .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#RightSide #RTBox .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+#RightSide #RTBox .slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+#RightSide #RTBox input:checked + .slider {
+  background-color: #2196F3;
+}
+#RightSide #RTBox input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+#RightSide #RTBox input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+#RightSide #RTBox .slider.round {
+  border-radius: 34px;
+}
+#RightSide #RTBox .slider.round:before {
+  border-radius: 50%;
+}
+#RightSide #RSBox {
+  display: block;
+  margin-top: 35px;
+  margin-left: 35px;
+  font-family: nimbus;
+}
+#RightSide #RSBox #RSBInput {
+  border-style: none;
+  padding-left: 10px;
+  background: none;
+  outline: none;
+}
+#RightSide #RMBox {
+  display: block;
+  margin-top: 35px;
+  margin-left: 35px;
+  font-family: nimbus;
+}
+#RightSide #RMBox a {
+  font-weight: 100;
+  color: blue;
+}
+#RightSide #RMBox p {
+  font-family: neometricBold;
+  font-size: 35px;
+  margin-top: 15px;
+}
+#RightSide #RBBox {
+  display: block;
+  margin-top: 35px;
+  margin-left: 35px;
+}
+#RightSide #RBBox .MeetingTime {
+  margin-top: 60px;
+}
+#RightSide #RBBox .MeetingTime i {
+  background: #e3c6ee;
+  padding: 10px;
+  border-radius: 12px;
+  position: absolute;
+}
+#RightSide #RBBox .MeetingTime p {
+  display: inline-block;
+  margin-left: 15px;
+  margin-left: 40px;
+  position: absolute;
+  font-size: 13px;
+  margin-top: 4px;
+}
+#RightSide #RBBox .MeetingTime .MT {
+  font-weight: bold;
+}
+#RightSide #RBBox #RTLBButton {
+  background: #9e42c9;
+  display: inline-block;
+  padding: 13px 20px;
+  width: 100px;
+  margin-top: 60px;
+  border-radius: 15px;
+  color: white;
+}
+#RightSide #RBBox #RTLBButton i {
+  float: right;
+}
+#RightSide #RBBox #RTLBButton:hover {
+  cursor: pointer;
+  background: #8c35b4;
+  transition: 0.2s;
+}
+
+/*# sourceMappingURL=App.css.map */

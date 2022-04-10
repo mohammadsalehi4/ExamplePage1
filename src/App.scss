@@ -1,0 +1,482 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/////////////////////////////////////////////////////////////////////
+
+$height:680px;
+$besideDivWidth:294px;
+
+@font-face {
+    font-family: nunito;
+    src: url('../public/Nunito.ttf');
+}
+
+@font-face {
+    font-family: nimbus;
+    src: url('../public/Nimbus.ttf');
+}
+
+@font-face {
+    font-family: neometricBold;
+    src: url('../public/NeometricAltExtraBold\(Bold\).otf');
+}
+
+body{
+    background: rgb(208, 208, 240);
+    font-family: nunito;
+}
+
+#OuterBox{
+    width: 1470px;
+    height: 680px;
+    background: rgb(236, 236, 236);
+    margin-left: 35px;
+    margin-top: 25px;
+    border-radius: 30px;
+    position: absolute;
+}
+
+#topLogo{
+    font-size: 25px;
+    font-family: nimbus;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.innerLogoName{
+    display: inline;
+}
+
+.rightLogoName{
+    color: rgb(71, 71, 240);
+}
+
+#logo{
+    background: url('../public/OP.png');
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 35px;
+}
+
+#LeftSide{
+    position: absolute;
+    width: $besideDivWidth;
+    height: $height;
+}
+
+#LeftMenu{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 70px;
+    a{
+        display: block;
+        padding: 15px 25px;
+        margin-top: 10px;
+        border-radius: 20px;
+        color: rgb(61, 61, 61);
+        .FAMenu{
+            display: none;
+            color: white;
+            float: right;
+        }
+    }
+    a:hover{
+        background: rgb(158, 66, 201);
+        color: white;
+        transition: 0.2s;
+        cursor: pointer;
+        .FAMenu{
+            display: inline-block;
+        }
+    }
+}
+
+#leftButtomMenu{
+    position: absolute;
+    height: 200px;
+    width: 80%;
+    margin-left: 10%;
+    #LBMTitle{
+        color: rgb(104, 104, 104);
+        margin-top: 20px;
+        font-size: 12px;
+        margin-left: 25px;
+    }
+    a{
+        display: block;
+        padding: 15px 25px;
+        margin-top: 10px;
+        border-radius: 20px;
+        color: rgb(0, 0, 0);
+        font-weight: 900;
+
+        .LBMNumber{
+            background: orange;
+            display: inline;
+            float: right;
+            color: white;
+            padding: 9px 12px;
+            border-radius: 100%;
+            margin-top: -9px;
+        }
+    }
+    a:hover{
+        background: rgb(158, 66, 201);
+        color: white;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+}
+
+#MiddleSide{
+    position: absolute;
+    background: white;
+    width: 882px;
+    height: 640px;
+    top: 20px;
+    left:294px;
+    border-radius: 30px;
+    #MTLBox{
+        position: absolute;
+        width: 500px;
+        height: 270px;
+        #MTLBTitle{
+            font-family: neometricBold;
+            font-size: 40px;
+            box-sizing: border-box;
+            margin-top: 60px;
+            margin-left: 40px;
+            font-weight: bolder;
+            display: block;
+        }
+        #MTLBDisc{
+            margin-left: 40px;
+            margin-top: 20px;
+            display: block;
+        }
+        #MTLBButton{
+            background: rgb(158, 66, 201);
+            display: inline-block;
+            padding: 13px 20px;
+            width: 130px;
+            margin-left: 40px;
+            margin-top: 20px;
+            border-radius: 15px;
+            color: white;
+            i{
+                display: in;
+                float: right;
+            }
+        }
+        #MTLBButton:hover{
+            cursor: pointer;
+            background: rgb(140, 53, 180);
+            transition: 0.2s;
+        }
+    }
+    #MTRBox{
+        position: absolute;
+        width: 300px;
+        height: 270px;
+        margin-left: 582px;
+        background: url('../public/3d.png');
+        background-size:contain;
+        background-repeat: no-repeat;
+    }
+    #MMBBox{
+        position: absolute;
+        width: 800px;
+        height: 340px;
+        margin-left: 41px;
+        margin-top: 280px;
+        #week{
+            font-weight: 700;
+        }
+        #menu{
+            background: rgb(236, 236, 236);
+            border-radius: 10px;
+            position: absolute;
+            overflow: hidden;
+            display: none;
+            .weekDay{
+                font-size: 15px;
+                padding: 15px 20px;
+                width: 160px;
+                i{
+                    float: right;
+                    display: none;
+                    color: white;
+                }
+            }
+            .weekDay:hover{
+                background: rgb(140, 53, 180);
+                color: white;
+                transition: 0.3s;
+                cursor: pointer;
+                i{
+                    display: inline-block;
+                }
+            }
+        }
+        #week:hover #menu{
+            cursor: pointer;
+                display: inline-block;
+            
+        }
+        #challenge{
+            width: 500px;
+            height: 150px;
+            background: rgb(236, 236, 236);
+            margin-top: 10px;
+            margin-left: 255px;
+            border-radius: 20px;
+            #leftChallenge{
+                width: 8px;
+                height: 120px;
+                margin-top: 15px;
+                margin-left: 15px;
+                background: purple;
+                position: absolute;
+                border-radius: 10px;
+            }
+            #challengeBackground{
+                height: 120px;
+                width: 120px;
+                background: url('../public/business.png');
+                background-size: contain;
+                position: absolute;
+                margin-left: 40px;
+                margin-top: 15px;
+            }
+            #challengeTime{
+                position: absolute;
+                color: blue;
+                margin-left: 190px;
+                margin-top: 20px;
+                p{
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+            #challengeTitle{
+                position: absolute;
+                display: inline-block;
+                font-weight: 900;
+                margin-left: 190px;
+                margin-top: 50px;
+                width: 180px;
+            }
+            #challengeDesc{
+                position: absolute;
+                width: 250px;
+                margin-left: 190px;
+                margin-top: 90px;
+                font-size: 14px;
+            }
+            #CArrow{
+                position: absolute;
+                margin-top: 120px;
+                margin-left: 450px;
+            }
+        }
+        #challenge:hover{
+            background: rgb(224, 223, 223);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+    }
+}
+
+#RightSide{
+    width: $besideDivWidth;
+    position: absolute;
+    left: 1176px;
+    height: $height;
+    #RTBox{
+        margin-top: 35px;
+        margin-left: 35px;
+        display: block;
+        /* The switch - the box around the slider */
+        p{
+            display: inline-block;
+            font-size: 12px;
+            font-weight: bolder;
+        }
+        .switch {
+            position: absolute;
+            display: inline-block;
+            width: 30px;
+            height: 17px;
+            margin-left: 30px;
+        }
+        
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 13px;
+            width: 13px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            -webkit-transform: translateX(13px);
+            -ms-transform: translateX(13px);
+            transform: translateX(13px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        } 
+        
+    }
+    #RSBox{
+        display: block;
+        margin-top: 35px;
+        margin-left: 35px;
+        font-family: nimbus;
+        #RSBInput{
+            border-style: none;
+            padding-left: 10px;
+            background: none;
+            outline: none;
+        }
+    }
+    #RMBox{
+        display: block;
+        margin-top: 35px;
+        margin-left: 35px;
+        font-family: nimbus;
+        a{
+            font-weight: 100;
+            color: blue;
+        }
+        p{
+            font-family: neometricBold;
+            font-size: 35px;
+            margin-top: 15px;
+        }
+    }
+    #RBBox{
+        display: block;
+        margin-top: 35px;
+        margin-left: 35px;
+        .MeetingTime{
+            margin-top: 60px;
+            i{
+                background: rgb(227, 198, 238);
+                padding: 10px;
+                border-radius: 12px;
+                position: absolute;
+            }
+            p{
+                display: inline-block;
+                margin-left: 15px;
+                margin-left: 40px;
+                position: absolute;
+                font-size: 13px;
+                margin-top: 4px;
+            }
+            .MT{
+                font-weight: bold;
+            }
+        }
+        #RTLBButton{
+            background: rgb(158, 66, 201);
+            display: inline-block;
+            padding: 13px 20px;
+            width: 100px;
+            margin-top: 60px;
+            border-radius: 15px;
+            color: white;
+            i{
+                float: right;
+            }
+        }
+        #RTLBButton:hover{
+            cursor: pointer;
+            background: rgb(140, 53, 180);
+            transition: 0.2s;
+        }
+    }
+}
