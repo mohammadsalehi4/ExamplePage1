@@ -2,11 +2,101 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-      <link rel="shortcut icon" href="./favicon(1).ico" />
     <title>example</title>
+    <link rel="stylesheet" type="text/css" href="App.css" id="lnk"/>
+
+    <script> 
+      function toggleTheme() { 
+        var theme = document.getElementsByTagName('link')[0];
+        if (theme.getAttribute('href') == 'App.css') {
+            theme.setAttribute('href', 'App2.css');
+            document.getElementById('switchDisc').style.color="white"
+        } else {
+            theme.setAttribute('href', 'App.css');
+            document.getElementById('switchDisc').style.color="black"
+        }
+
+      } 
+  </script> 
+  <style>
+    #RTBox {
+      top: 65px;
+      left: 1245px;
+      width: 160px;
+      display: block;
+      position: absolute;
+      z-index: 4;
+    }
+    #RTBox p {
+      display: inline-block;
+      font-size: 12px;
+      position: absolute;
+      font-weight: bolder;
+      margin-top: 2px;
+    }
+    #RTBox .switch {
+      position: absolute;
+      display: inline-block;
+      width: 30px;
+      height: 17px;
+      position: absolute;
+      margin-left: 150px;
+    }
+    #RTBox .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    #RTBox .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+    #RTBox .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+    #RTBox input:checked + .slider {
+      background-color: #2196F3;
+    }
+    #RTBox input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+    #RTBox input:checked + .slider:before {
+      -webkit-transform: translateX(13px);
+      -ms-transform: translateX(13px);
+      transform: translateX(13px);
+    }
+    #RTBox .slider.round {
+      border-radius: 34px;
+    }
+    #RTBox .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id='RTBox'>
+      <p id="switchDisc" style="color: black;">Switch to Dark Theme</p>
+      <label class="switch" id='switcher'>
+        <input type="checkbox" onchange="toggleTheme()"></input>
+        <span class="slider round"></span>
+      </label>
+    </div>
     <div id="root"></div>
   </body>
 </html>

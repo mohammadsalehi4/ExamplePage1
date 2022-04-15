@@ -50,15 +50,15 @@ table {
 
 @font-face {
   font-family: nunito;
-  src: url("../public/Nunito.ttf");
+  src: url("./Nunito.ttf");
 }
 @font-face {
   font-family: nimbus;
-  src: url("../public/Nimbus.ttf");
+  src: url("./Nimbus.ttf");
 }
 @font-face {
   font-family: neometricBold;
-  src: url("../public/NeometricAltExtraBold(Bold).otf");
+  src: url("./NeometricAltExtraBold(Bold).otf");
 }
 body {
   background: #d0d0f0;
@@ -78,7 +78,7 @@ body {
 #topLogo {
   font-size: 25px;
   font-family: nimbus;
-  margin-left: 150px;
+  margin-left: 130px;
   margin-top: 50px;
 }
 
@@ -91,13 +91,13 @@ body {
 }
 
 #logo {
-  background: url("../public/OP.png");
+  background: url("./black.png");
   background-size: cover;
   width: 60px;
   height: 60px;
   display: inline-block;
   position: absolute;
-  margin-left: 70px;
+  margin-left: 50px;
   margin-top: 35px;
 }
 
@@ -222,7 +222,7 @@ body {
   width: 300px;
   height: 270px;
   margin-left: 582px;
-  background: url("../public/3d.png");
+  background: url("./3d.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -286,7 +286,7 @@ body {
 #MiddleSide #MMBBox #challenge #challengeBackground {
   height: 120px;
   width: 120px;
-  background: url("../public/business.png");
+  background: url("./business.png");
   background-size: contain;
   position: absolute;
   margin-left: 40px;
@@ -333,71 +333,7 @@ body {
   position: absolute;
   left: 1176px;
   height: 680px;
-}
-#RightSide #RTBox {
-  margin-top: 35px;
-  margin-left: 35px;
-  display: block;
-  /* The switch - the box around the slider */
-  /* Hide default HTML checkbox */
-  /* The slider */
-  /* Rounded sliders */
-}
-#RightSide #RTBox p {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: bolder;
-}
-#RightSide #RTBox .switch {
-  position: absolute;
-  display: inline-block;
-  width: 30px;
-  height: 17px;
-  margin-left: 30px;
-}
-#RightSide #RTBox .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-#RightSide #RTBox .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-#RightSide #RTBox .slider:before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-#RightSide #RTBox input:checked + .slider {
-  background-color: #2196F3;
-}
-#RightSide #RTBox input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-#RightSide #RTBox input:checked + .slider:before {
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
-  transform: translateX(13px);
-}
-#RightSide #RTBox .slider.round {
-  border-radius: 34px;
-}
-#RightSide #RTBox .slider.round:before {
-  border-radius: 50%;
+  margin-top: 40px;
 }
 #RightSide #RSBox {
   display: block;

@@ -1,5 +1,9 @@
-import './App.css'
+
 import React,{useState} from 'react';
+import { ThemeSwitcherProvider } from 'react-css-theme-switcher';
+
+
+
 function App() {
   const [messages,SetMessages]=useState(6)
   const [Activities,SetActivities]=useState(0)
@@ -27,6 +31,15 @@ function App() {
     SetShowPlan(index)
   }
 
+  const changeTheme=()=>{
+    var theme = document.getElementsByTagName('link')[0]; 
+    if (theme.getAttribute('href') == 'App2.css') { 
+        theme.setAttribute('href', 'App.css'); 
+    } else { 
+        theme.setAttribute('href', 'App2.css'); 
+    } 
+  }
+
   return (
     <div id="OuterBox">
       <div id='LeftSide'>
@@ -36,7 +49,7 @@ function App() {
           <div className='innerLogoName rightLogoName'>rolling</div>
         </div>
         <div id='LeftMenu'>
-          <a ><i class="fa fa-tachometer" aria-hidden="true"></i>{' '}Dashboard<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
+          <a className='on'><i class="fa fa-tachometer" aria-hidden="true"></i>{' '}Dashboard<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
           <a ><i class="fa fa-list-alt" aria-hidden="true"></i>{' '}Classes<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
           <a ><i class="fa fa-map-o" aria-hidden="true"></i>{' '}Courses<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
           <a ><i class="fa fa-get-pocket" aria-hidden="true"></i>{' '}Earnings<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
@@ -91,13 +104,7 @@ function App() {
         </div>
       </div>
       <div id='RightSide'>
-        <div id='RTBox'>
-          <p id="switchDisc">Switch to Dark Theme</p>
-          <label class="switch">
-            <input type="checkbox"></input>
-            <span class="slider round"></span>
-          </label>
-        </div>
+
         <div id='RSBox'>
           <i class="fa fa-search" aria-hidden="true"></i>
           <input type='text' id='RSBInput' placeholder='Search'></input>
