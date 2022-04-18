@@ -49,16 +49,16 @@ function App() {
           <div className='innerLogoName rightLogoName'>rolling</div>
         </div>
         <div id='LeftMenu'>
-          <a className='on'><i class="fa fa-tachometer" aria-hidden="true"></i>{' '}Dashboard<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
-          <a ><i class="fa fa-list-alt" aria-hidden="true"></i>{' '}Classes<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
-          <a ><i class="fa fa-map-o" aria-hidden="true"></i>{' '}Courses<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
-          <a ><i class="fa fa-get-pocket" aria-hidden="true"></i>{' '}Earnings<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
-          <a ><i class="fa fa-newspaper-o" aria-hidden="true"></i>{' '}Statements<i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
+          <a className='on'><i class="fa fa-tachometer" aria-hidden="true"></i>{' '}<p>Dashboard</p><i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
+          <a ><i class="fa fa-list-alt" aria-hidden="true"></i>{' '}<p>Classes</p><i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
+          <a ><i class="fa fa-map-o" aria-hidden="true"></i>{' '}<p>Courses</p><i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
+          <a ><i class="fa fa-get-pocket" aria-hidden="true"></i>{' '}<p>Earnings</p><i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
+          <a ><i class="fa fa-newspaper-o" aria-hidden="true"></i>{' '}<p>Statements</p><i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></a>
         </div>
         <div id='leftButtomMenu'>
           <p id='LBMTitle'>insights</p>
-          <a ><i class="fa fa-envelope-o" aria-hidden="true"></i>{' '}Messages {messages!=0 ? <div className='LBMNumber'>{messages}</div> : null} </a>
-          <a ><i class="fa fa-bolt" aria-hidden="true"></i>{' '}Activities {Activities!=0 ? <div className='LBMNumber'>{Activities}</div> : null}</a>
+          <a ><i class="fa fa-envelope-o" aria-hidden="true"></i>{' '}<p>Messages</p> {messages!=0 ? <div className='LBMNumber'>{messages}</div> : null} </a>
+          <a ><i class="fa fa-bolt" aria-hidden="true"></i>{' '}<p>Activities </p>{Activities!=0 ? <div className='LBMNumber'>{Activities}</div> : null}</a>
         </div>
       </div>
       
@@ -66,7 +66,7 @@ function App() {
       <div id='MiddleSide'>
         <div id='MTLBox'>
           <p id='MTLBTitle'>Search the<br/> 200,000+ Creators</p>
-          <p id='MTLBDisc'>Upgrade to watch, play, learn<br/>make and discover</p>
+          <p id='MTLBDisc'>Upgrade to watch, play, learn, make and discover</p>
           <div id='MTLBButton'>Upgrade Now <i class="fa fa-arrow-right FAMenu" aria-hidden="true"></i></div>
         </div>
         <div id='MTRBox'></div>
@@ -113,7 +113,7 @@ function App() {
           <a>
             Premeum Class ...
           </a>
-          <p>
+          <p id='TBYCC'>
             Take Back Your Ceative Control
           </p>
         </div>
