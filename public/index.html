@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>example</title>
-    <link rel="stylesheet" type="text/css" href="App.css" id="lnk"/>
+    <link rel="stylesheet" type="text/css" href="light.css" id="lnk"/>
 
     <script> 
       function toggleTheme() { 
         var theme = document.getElementsByTagName('link')[0];
-        if (theme.getAttribute('href') == 'App.css') {
-            theme.setAttribute('href', 'App2.css');
+        if (theme.getAttribute('href') == 'light.css') {
+            theme.setAttribute('href', 'dark.css');
             document.getElementById('switchDisc').style.color="white"
         } else {
-            theme.setAttribute('href', 'App.css');
+            theme.setAttribute('href', 'dark.css');
             document.getElementById('switchDisc').style.color="black"
         }
-
       } 
   </script> 
   <style>
