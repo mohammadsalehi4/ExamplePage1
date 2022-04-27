@@ -166,9 +166,16 @@ body{
             display: inline;
             float: right;
             color: white;
-            padding: 9px 12px;
             border-radius: 100%;
+            width: 35px;
+            height: 35px;
             margin-top: -9px;
+            text-align: center;
+            padding-top: auto;
+            p{
+                margin: auto auto;
+                margin-top: 9px;
+            }
         }
     }
     a:hover{
@@ -539,6 +546,12 @@ body{
                 border-radius: 100%;
                 margin-top: -9px;
                 display: none;
+                text-align: center;
+                padding-top: auto;
+                p{
+                    margin: auto auto;
+                    margin-top: 9px;
+                }
             }
         }
         a:hover{

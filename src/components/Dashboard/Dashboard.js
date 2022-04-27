@@ -1,9 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
 const Dashboard = () => {
-    const [messages,SetMessages]=useState(6)
     const [Activities,SetActivities]=useState(0)
     const [Level,SetLevel]=useState('senior Desiner')
-    const [ShowPlan,SetShowPlan]=useState(0)
     const [MeetingTime,SetMeetingTime]=useState([{
       year:2022,
       month:'April',
@@ -21,11 +22,10 @@ const Dashboard = () => {
       title:'The Design Engineering Process',
       description:'The enginerering design process is a series of steps...'
     }])
-  
-    const changePlan=(index)=>{
-      SetShowPlan(index)
-    }
-  
+
+    const counter = useSelector(state => state);
+    const dispatch = useDispatch();
+
     return (
       <div id="OuterBox">
         <div id='LeftSide'>
@@ -43,7 +43,7 @@ const Dashboard = () => {
           </div>
           <div id='leftButtomMenu'>
             <p id='LBMTitle'>insights</p>
-            <a ><i class="fa fa-envelope-o" aria-hidden="true"></i>{' '}<p>Messages</p> {messages!=0 ? <div className='LBMNumber'>{messages}</div> : null} </a>
+            <a onClick={()=>{dispatch({type:"ADD"})}}><i class="fa fa-envelope-o" aria-hidden="true"></i>{' '}<p>Messages</p> {counter.messages!=0 ? <div className='LBMNumber'><p>{counter.messages}</p></div> : null} </a>
             <a ><i class="fa fa-bolt" aria-hidden="true"></i>{' '}<p>Activities </p>{Activities!=0 ? <div className='LBMNumber'>{Activities}</div> : null}</a>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Dashboard = () => {
                 {
                   MeetingTime.map((item,index)=>{
                     return(
-                      <div id='challenge' onClick={()=>{changePlan(index)}}>
+                      <div id='challenge' onClick={()=>{dispatch({type:"CHANGE",value:index})}}>
                         <div id='leftChallenge'></div>
                         <div id='challengeBackground'></div>
                         <div id='challengeTime'>
@@ -106,14 +106,14 @@ const Dashboard = () => {
           <div id='RBBox'>
             <div className='MeetingTime'>
               <i class="fa fa-calendar" aria-hidden="true"></i>
-              <p>{String(MeetingTime.day)}{' '}{MeetingTime[ShowPlan].month},{MeetingTime[ShowPlan].year}</p><br/>
-              <p className='MT'>{MeetingTime[ShowPlan].startHour}-{MeetingTime[ShowPlan].endHour} AM</p>
+              <p>{String(MeetingTime.day)}{' '}{MeetingTime[counter.ShowPlan].month},{MeetingTime[counter.ShowPlan].year}</p><br/>
+              <p className='MT'>{MeetingTime[counter.ShowPlan].startHour}-{MeetingTime[counter.ShowPlan].endHour} AM</p>
             </div>
   
             <div className='MeetingTime'>
               <i class="fa fa-clock-o" aria-hidden="true"></i>
               <p>Duration</p><br/>
-              <p className='MT'>{MeetingTime[ShowPlan].endHour-MeetingTime[ShowPlan].startHour} Hours</p>
+              <p className='MT'>{MeetingTime[counter.ShowPlan].endHour-MeetingTime[counter.ShowPlan].startHour} Hours</p>
             </div>
   
             <div className='MeetingTime'>

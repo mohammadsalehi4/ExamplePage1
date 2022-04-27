@@ -166,9 +166,16 @@ body {
   display: inline;
   float: right;
   color: white;
-  padding: 9px 12px;
   border-radius: 100%;
+  width: 35px;
+  height: 35px;
   margin-top: -9px;
+  text-align: center;
+  padding-top: auto;
+}
+#leftButtomMenu a .LBMNumber p {
+  margin: auto auto;
+  margin-top: 9px;
 }
 #leftButtomMenu a:hover {
   background: #9e42c9;
